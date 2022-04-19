@@ -20,8 +20,11 @@
             padding-left: 25px;
             color: rgb(228, 228, 228);
         }
+        h3:hover {
+            color: hsl(178, 100%, 50%);
+        }
         p {
-            font-size: 16px;
+            font-size: 15px;
         }
 
         a:any-link {
@@ -39,33 +42,62 @@
             top: 50%;
             left: 50%;
             transform: translate(-50%, -50%);
+            box-shadow: 1px 1px 150px 30px #020f27;
 
         }
 
         #card {
             border-radius: 8px;
         }     
+
+        #card:hover {
+            background-image: url(".images/icon-view.svg");
+            background: hsl(178, 100%, 50%);
+            opacity: .5;
+            
+        }
        
         #eth {
             float: left;
             margin-left: 25px;
-            position: relative;
+            
+            color: hsl(178, 100%, 50%);
         }
 
         #time {
             float: right;
             margin-right: 25px;
-            position: relative;
-        }
+            ;
+            color: hsl(215, 51%, 70%)
+        }          
 
-        #creation {
-            float: none;
+        h3.description {
+            color:hsl(215, 51%, 70%);
+            font-weight:lighter;
+            font-size: 15px;
+        }
+        #creation_container {
+            top: 450px;
+            left: 25px;
+            border-top: 1px solid hsl(214, 20%, 28%);
+            width: 84%;
             position: absolute;
-            margin-top: 50px;
-            margin-left: 20px;
         }
-
-        
+        #creation {
+    
+            color:hsl(215, 51%, 70%);
+        }
+        #avatar {
+            border: 1px solid white;
+            border-radius: 100px;
+            width: 25px;
+            margin: 13px 5px;
+            float:left;
+            
+        }
+        #creator:hover {
+            color: hsl(178, 100%, 50%);
+        }
     </style>
     <title>NFT preview card component - Frontend Mentor Challenges</title>
 </head>
@@ -73,12 +105,13 @@
 <div id="card_container">
     <img id="card" src="./images/image-equilibrium.jpg" id="nft_card" width="250px">
     <h3>Equilibrium #3429</h3>
-    <h3 id="description">Our Equilibrium collection promotes balance and calm.</h3>
+    <h3 class="description">Our Equilibrium collection promotes balance and calm.</h3>
     <p id="eth"><img src="./images/icon-ethereum.svg" style="padding-right: 5px;"> 0.041 ETH</p>
     <p id="time"><img src="./images/icon-clock.svg" style="padding-right: 5px;">3 days left</p>
-    <hr>
-    <p id="creation"><img src="./images/image-avatar.png" width="30x" style="padding-right: 15px;">Creation of <a href=#>Jules Wyvern</a></p>
-
+    <div id="creation_container">
+    <img id="avatar" src="./images/image-avatar.png">
+    <p id="creation">Creation of <a id="creator" href=#>Jules Wyvern</a></p>
+    </div>
 </div>
     
 </body>
